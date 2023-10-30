@@ -27,7 +27,9 @@ In either case there is possibility to apply discount based on given strategy.
 Given the nature of this task and lack of possibility to clarify requirements, following assumption and decisions  has been made:
 
 #### Price calculation
-Service will allow to calculate price either based on product id and amount or product price and amount
+
+Service will allow to calculate price either based on product id and amount or product price and amount.
+Discount will be applied based on provided discount policy and parameters.
 
 #### Percentage discount
 Percentage discount will reduce total price of all products. Possible percentage value range would be 0-100 (including 0 and 100).
@@ -39,3 +41,26 @@ Amount based discount strategy will add percentage discount that will be calcula
 
 discount_percentage = (amount - 1) * discount_step
 total price = (100 - discount_percentage) * (amount * price_of_product)
+
+# Implementation
+
+## Requirements
+
+- java 17
+- docker
+
+## Running application
+
+1. Set JAVA_HOME (if not set)
+2. Build application image
+
+```bash
+./gradlew bootBuildImage
+```
+
+3. Run application with docker
+
+```bash
+docker run -p 8080:8080 price-api:0.0.1-SNAPSHOT
+```
+
