@@ -51,6 +51,8 @@ total price = (100 - discount_percentage) * (amount * price_of_product)
 
 ## Running application
 
+### Building
+
 1. Set JAVA_HOME (if not set)
 2. Build application image
 
@@ -63,4 +65,18 @@ total price = (100 - discount_percentage) * (amount * price_of_product)
 ```bash
 docker run -p 8080:8080 price-api:0.0.1-SNAPSHOT
 ```
+
+### Swagger
+
+Service exposes swagger that can be accessed via http://localhost:8080/swagger-ui/index.html after starting application
+locally
+
+### Local product store
+
+For demonstration purposes product price lookup is done based on in memory implementation that following products:
+
+- id: `39a8ce44-13a5-4fd6-a6e7-cbe08a2e8ec7` price: 1
+- id: `4eb94e83-ecd0-49c4-aee8-17b023f466dc` price: 10
+- id: `f6fbc666-9814-40ca-b68e-0889fa970621` price: 100
+
 
