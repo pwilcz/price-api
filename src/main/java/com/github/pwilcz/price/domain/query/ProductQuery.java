@@ -9,6 +9,7 @@ public record ProductQuery(
         @NotNull
         UUID productId,
         @Min(0)
+        @NotNull
         int amount,
         DiscountQuery discount
 ) {

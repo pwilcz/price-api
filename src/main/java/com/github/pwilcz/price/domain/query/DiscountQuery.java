@@ -9,6 +9,7 @@ public record DiscountQuery(
         DiscountPolicyType type,
         @Min(0)
         @Max(100)
+        @NotNull
         int value
 ) {
     public enum DiscountPolicyType {
