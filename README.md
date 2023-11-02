@@ -79,4 +79,10 @@ For demonstration purposes product price lookup is done based on in memory imple
 - id: `4eb94e83-ecd0-49c4-aee8-17b023f466dc` price: 10
 - id: `f6fbc666-9814-40ca-b68e-0889fa970621` price: 100
 
+## Possible improvements and changes to consider
+### Multiple price calculation/discount application policies
+Currently there is single price calculation strategy for calculating initial price and applying discount.
+It might be worth to consider adding possibility to apply different price calculation strategies or different discount application strategies. 
 
+It might be achieved by e.g. introducing additional price calculation strategies alongside discount calculation strategies 
+or merging price and discount calculation as a single operation
